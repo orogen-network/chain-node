@@ -14,6 +14,8 @@ use sc_chain_spec::Properties;
 use sp_core::{sr25519, Pair};
 #[cfg(feature = "dev-runtime")]
 use sp_runtime::traits::{IdentifyAccount, Verify};
+#[cfg(feature = "dev-runtime")]
+use sp_core::crypto::Ss58Codec;
 
 /// Concrete chain-spec type for this node. No extensions, no host functions.
 pub type ChainSpec = sc_service::GenericChainSpec;
@@ -139,6 +141,62 @@ pub fn local() -> Result<ChainSpec, String> {
                 grandpa_authority_from_seed("Alice"),
                 grandpa_authority_from_seed("Bob"),
             ],
+        ))
+        .build())
+}
+
+/// Orogen Forge testnet chain spec.
+///
+/// Single-validator forge testnet seeded by the foundation. Authority and
+/// sudo accounts are freshly-generated sr25519/ed25519 keys (no well-known
+/// `//Alice` seeds) so that the chain id `orogen_forge` cannot be hijacked
+/// by anyone running the same dev seeds.
+///
+/// Public keys are embedded as raw hex below; the corresponding private
+/// keys live in the validator's local keystore on the seed node and are
+/// not part of the public chain spec.
+#[cfg(feature = "dev-runtime")]
+pub fn forge() -> Result<ChainSpec, String> {
+    use sp_core::crypto::AccountId32;
+    let wasm = WASM_BINARY.ok_or("WASM binary not available; build with `cargo build`.")?;
+
+    let sudo: AccountId =
+        AccountId32::from_ss58check("5FeYeFTh4xa6n85zq1Aswn2vKbuRW76HvVcXPfi2pdsFBGLR")
+            .map_err(|e| format!("invalid forge sudo ss58: {e:?}"))?;
+
+    let validator: AccountId =
+        AccountId32::from_ss58check("5Fsykze6UqiXB9VrLr92icHG64AQckwRLuNZWAdXkuU92y6n")
+            .map_err(|e| format!("invalid forge validator ss58: {e:?}"))?;
+
+    let aura_authority: sp_consensus_aura::sr25519::AuthorityId =
+        sp_core::sr25519::Public::from_ss58check(
+            "5Fsykze6UqiXB9VrLr92icHG64AQckwRLuNZWAdXkuU92y6n",
+        )
+        .map_err(|e| format!("invalid forge aura ss58: {e:?}"))?
+        .into();
+
+    let grandpa_authority: sp_consensus_grandpa::AuthorityId =
+        sp_core::ed25519::Public::from_ss58check(
+            "5DSGzY62YjTmcgspz3wzZWFdG3SpuDc9pgzYgMhp1DeBCVBv",
+        )
+        .map_err(|e| format!("invalid forge grandpa ss58: {e:?}"))?
+        .into();
+
+    let mut p = props();
+    p.insert("tokenSymbol".into(), "OROG".into());
+    p.insert("tokenDecimals".into(), 12u32.into());
+
+    Ok(ChainSpec::builder(wasm, Default::default())
+        .with_name("Orogen Forge Testnet")
+        .with_id("orogen_forge")
+        .with_chain_type(ChainType::Live)
+        .with_protocol_id("orogenforge")
+        .with_properties(p)
+        .with_genesis_config_patch(genesis_patch(
+            sudo,
+            vec![validator],
+            vec![aura_authority],
+            vec![grandpa_authority],
         ))
         .build())
 }

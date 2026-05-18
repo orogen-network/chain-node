@@ -47,6 +47,7 @@ impl SubstrateCli for Cli {
             return Ok(match id {
                 "" | "dev" => Box::new(chain_spec::dev()?),
                 "local" => Box::new(chain_spec::local()?),
+                "forge" => Box::new(chain_spec::forge()?),
                 path => Box::new(chain_spec::ChainSpec::from_json_file(
                     std::path::PathBuf::from(path),
                 )?),

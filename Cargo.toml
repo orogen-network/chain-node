@@ -80,6 +80,11 @@ substrate-build-script-utils = "11.0.1"
 [patch.crates-io]
 core2 = { path = "vendor/core2" }
 
+# Local pallet-suite override so we can iterate on the runtime without
+# repointing the git+SHA. Drop when pallet-suite has the fix upstreamed.
+[patch."https://github.com/orogen-network/pallet-suite"]
+orogen-runtime = { path = "../pallet-suite/runtime" }
+
 [features]
 # Default is the production-shaped runtime with no sudo and no built-in
 # dev/local chain specs.
