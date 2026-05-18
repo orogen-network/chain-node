@@ -1,0 +1,91 @@
+[package]
+name = "chain-node"
+version = "0.1.0"
+authors = ["Orogen"]
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://github.com/orogen-network/chain-node"
+description = "Substrate node binary for the Orogen chain."
+build = "build.rs"
+
+[[bin]]
+name = "chain-node"
+path = "src/main.rs"
+
+[dependencies]
+# CLI / config
+clap = { version = "4.5", features = ["derive"] }
+futures = "0.3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+log = "0.4"
+jsonrpsee = { version = "0.24", features = ["server"] }
+
+# Substrate primitives
+sp-core = "41.0.0"
+sp-io = "46.0.0"
+sp-keyring = "47.0.0"
+sp-runtime = "47.0.0"
+sp-api = "42.0.0"
+sp-block-builder = "42.0.0"
+sp-blockchain = "45.0.0"
+sp-consensus = "0.48.0"
+sp-consensus-aura = "0.48.0"
+sp-consensus-grandpa = "29.0.0"
+sp-inherents = "42.0.0"
+sp-offchain = "42.0.0"
+sp-session = "44.0.0"
+sp-timestamp = "42.0.0"
+sp-transaction-pool = "42.0.0"
+
+# FRAME
+frame-support = "47.0.0"
+frame-system = "47.0.0"
+frame-system-rpc-runtime-api = "42.0.0"
+pallet-transaction-payment = "47.0.0"
+pallet-transaction-payment-rpc = "50.0.0"
+pallet-transaction-payment-rpc-runtime-api = "47.0.0"
+substrate-frame-rpc-system = "51.0.0"
+
+# Substrate client (service / network / consensus / RPC)
+sc-cli = "0.59.0"
+sc-service = "0.58.0"
+sc-executor = "0.49.0"
+sc-network = "0.57.0"
+sc-network-sync = "0.56.0"
+sc-keystore = "41.0.0"
+sc-client-api = "46.0.0"
+sc-consensus = "0.56.0"
+sc-consensus-aura = "0.57.0"
+sc-consensus-grandpa = "0.42.0"
+sc-consensus-manual-seal = "0.58.0"
+sc-basic-authorship = "0.55.0"
+sc-offchain = "52.0.0"
+sc-rpc = "52.0.0"
+sc-rpc-api = "0.56.0"
+sc-telemetry = "31.0.0"
+sc-transaction-pool = "46.0.0"
+sc-transaction-pool-api = "45.0.0"
+sc-chain-spec = "50.0.0"
+
+# Runtime
+orogen-runtime = { git = "https://github.com/orogen-network/pallet-suite", rev = "cdf522b3039ef985cbebcc25d2daf0f3b44ef7bb", default-features = false, features = ["std"] }
+
+[build-dependencies]
+substrate-build-script-utils = "11.0.1"
+
+# See note at end of file: upstream `core2` is yanked. We patch it to a
+# local in-tree stub that re-exports `std::io` items. Drop this patch
+# once Parity republishes `sc-network` on top of `multihash 0.19+`.
+[patch.crates-io]
+core2 = { path = "vendor/core2" }
+
+[features]
+# Default is the production-shaped runtime with no sudo and no built-in
+# dev/local chain specs.
+default = []
+# `dev-runtime` enables `pallet-sudo` and the built-in `dev` / `local` chain
+# specs (Alice/Bob/Charlie). NEVER pass this flag for a production build.
+dev-runtime = ["orogen-runtime/dev-runtime"]
+runtime-benchmarks = []
+try-runtime = []

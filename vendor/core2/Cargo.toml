@@ -1,0 +1,11 @@
+[package]
+name = "core2"
+version = "0.4.0"
+edition = "2021"
+license = "Apache-2.0 OR MIT"
+description = "Local in-tree stub of yanked core2 0.4.0; re-exports std::io for substrate node networking deps."
+
+[features]
+default = ["std"]
+std = []
+alloc = []
