@@ -69,7 +69,7 @@ sc-transaction-pool-api = "45.0.0"
 sc-chain-spec = "50.0.0"
 
 # Runtime
-orogen-runtime = { git = "https://github.com/orogen-network/pallet-suite", rev = "cdf522b3039ef985cbebcc25d2daf0f3b44ef7bb", default-features = false, features = ["std"] }
+orogen-runtime = { git = "https://github.com/orogen-network/pallet-suite", rev = "631b5a1561e823ab014e12351cdc1bba0fbf407a", default-features = false, features = ["std"] }
 
 [build-dependencies]
 substrate-build-script-utils = "11.0.1"
@@ -79,11 +79,6 @@ substrate-build-script-utils = "11.0.1"
 # once Parity republishes `sc-network` on top of `multihash 0.19+`.
 [patch.crates-io]
 core2 = { path = "vendor/core2" }
-
-# Local pallet-suite override so we can iterate on the runtime without
-# repointing the git+SHA. Drop when pallet-suite has the fix upstreamed.
-[patch."https://github.com/orogen-network/pallet-suite"]
-orogen-runtime = { path = "../pallet-suite/runtime" }
 
 [features]
 # Default is the production-shaped runtime with no sudo and no built-in
