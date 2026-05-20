@@ -69,7 +69,7 @@ sc-transaction-pool-api = "45.0.0"
 sc-chain-spec = "50.0.0"
 
 # Runtime
-orogen-runtime = { git = "https://github.com/orogen-network/pallet-suite", rev = "ca947b089344226e455dfcaccafedd7f14fe53ce", default-features = false, features = ["std"] }
+orogen-runtime = { git = "https://github.com/orogen-network/pallet-suite", rev = "e97050f088df6312f92b5f5f16df35e41a6668c4", default-features = false, features = ["std"] }
 
 [build-dependencies]
 substrate-build-script-utils = "11.0.1"

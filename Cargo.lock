@@ -5312,7 +5312,7 @@ checksum = "04744f49eae99ab78e0d5c0b603ab218f515ea8cfe5a456d7629ad883a3b6e7d"
 [[package]]
 name = "orogen-runtime"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=e97050f088df6312f92b5f5f16df35e41a6668c4#e97050f088df6312f92b5f5f16df35e41a6668c4"
 dependencies = [
  "frame-executive",
  "frame-support",
@@ -5364,7 +5364,7 @@ checksum = "b15813163c1d831bf4a13c3610c05c0d03b39feb07f7e09fa234dac9b15aaf39"
 [[package]]
 name = "pallet-attestation-registry"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=e97050f088df6312f92b5f5f16df35e41a6668c4#e97050f088df6312f92b5f5f16df35e41a6668c4"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -5426,7 +5426,7 @@ dependencies = [
 [[package]]
 name = "pallet-bme"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=e97050f088df6312f92b5f5f16df35e41a6668c4#e97050f088df6312f92b5f5f16df35e41a6668c4"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -5463,7 +5463,7 @@ dependencies = [
 [[package]]
 name = "pallet-job-market"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=e97050f088df6312f92b5f5f16df35e41a6668c4#e97050f088df6312f92b5f5f16df35e41a6668c4"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -5477,7 +5477,7 @@ dependencies = [
 [[package]]
 name = "pallet-model-registry"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=e97050f088df6312f92b5f5f16df35e41a6668c4#e97050f088df6312f92b5f5f16df35e41a6668c4"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -5491,7 +5491,7 @@ dependencies = [
 [[package]]
 name = "pallet-nonce-vault"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=e97050f088df6312f92b5f5f16df35e41a6668c4#e97050f088df6312f92b5f5f16df35e41a6668c4"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -5505,7 +5505,7 @@ dependencies = [
 [[package]]
 name = "pallet-operator-stake"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=e97050f088df6312f92b5f5f16df35e41a6668c4#e97050f088df6312f92b5f5f16df35e41a6668c4"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -5519,7 +5519,7 @@ dependencies = [
 [[package]]
 name = "pallet-oracle-twap"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=e97050f088df6312f92b5f5f16df35e41a6668c4#e97050f088df6312f92b5f5f16df35e41a6668c4"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -5533,7 +5533,7 @@ dependencies = [
 [[package]]
 name = "pallet-pouw-mint"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=e97050f088df6312f92b5f5f16df35e41a6668c4#e97050f088df6312f92b5f5f16df35e41a6668c4"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -5570,7 +5570,7 @@ dependencies = [
 [[package]]
 name = "pallet-slashing"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=e97050f088df6312f92b5f5f16df35e41a6668c4#e97050f088df6312f92b5f5f16df35e41a6668c4"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -5667,7 +5667,7 @@ dependencies = [
 [[package]]
 name = "pallet-treasury-ext"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=e97050f088df6312f92b5f5f16df35e41a6668c4#e97050f088df6312f92b5f5f16df35e41a6668c4"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -5681,7 +5681,7 @@ dependencies = [
 [[package]]
 name = "pallet-yuma-consensus"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=e97050f088df6312f92b5f5f16df35e41a6668c4#e97050f088df6312f92b5f5f16df35e41a6668c4"
 dependencies = [
  "frame-support",
  "frame-system",
