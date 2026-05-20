@@ -18,6 +18,8 @@ set (`Core`, `BlockBuilder`, `TaggedTransactionQueue`, `OffchainWorkerApi`,
 chain-node/
 ├── Cargo.toml          # client + RPC + consensus deps (47.x family)
 ├── build.rs            # substrate-build-script-utils
+├── scripts/
+│   └── validate-core2-workaround.sh
 ├── src/
 │   ├── main.rs         # entrypoint
 │   ├── cli.rs          # clap subcommand definitions (sc-cli types)
@@ -95,6 +97,13 @@ stub that re-exports the needed `std::io` items
 ships under `vendor/core2/`. Drop the patch once Parity republishes
 `sc-network` on top of `litep2p 0.14` (which uses `multihash 0.19+`, no
 `core2` dependency).
+
+The local release gate runs `scripts/validate-core2-workaround.sh`. It checks
+that the locked dependency graph still reaches
+`sc-network 0.57.0 -> litep2p 0.13.3 -> multihash 0.17.0 -> core2 0.4.0`,
+then verifies in a temporary copy that removing the patch fails specifically
+because `core2 0.4.0` is yanked. If a future upstream release removes that
+edge, the validation fails and the patch can be deleted.
 
 ## Changes to `pallet-suite`
 
