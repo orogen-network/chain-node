@@ -102,7 +102,7 @@ pub fn dev() -> Result<ChainSpec, String> {
     );
     Ok(ChainSpec::builder(wasm, Default::default())
         .with_name("Orogen Dev")
-        .with_id("llm_mining_dev")
+        .with_id("orogen_dev")
         .with_chain_type(ChainType::Development)
         .with_properties(props())
         .with_genesis_config_patch(genesis_patch(
@@ -127,7 +127,7 @@ pub fn local() -> Result<ChainSpec, String> {
     );
     Ok(ChainSpec::builder(wasm, Default::default())
         .with_name("Orogen Local Testnet")
-        .with_id("llm_mining_local")
+        .with_id("orogen_local")
         .with_chain_type(ChainType::Local)
         .with_properties(props())
         .with_genesis_config_patch(genesis_patch(

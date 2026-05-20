@@ -1,7 +1,7 @@
 //! RPC extensions for `chain-node`.
 //!
 //! Exposes the standard substrate RPC (`system`, `chain`, `state`, `author`,
-//! `payment`). Custom LLM-Mining RPCs (e.g. `bme_status`, `jobs_pending`)
+//! `payment`). Custom Orogen RPCs (e.g. `bme_status`, `jobs_pending`)
 //! will land here when their backing runtime APIs are implemented.
 
 use std::sync::Arc;
