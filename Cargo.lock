@@ -2213,7 +2213,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "39cab71617ae0d63f51a36d69f866391735b51691dbda63cf6f96d042b63efeb"
 dependencies = [
  "libc",
- "windows-sys 0.52.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -3315,7 +3315,7 @@ dependencies = [
  "hyper 1.9.0",
  "libc",
  "pin-project-lite",
- "socket2 0.5.10",
+ "socket2 0.6.3",
  "tokio",
  "tower-service",
  "tracing",
@@ -3643,7 +3643,7 @@ checksum = "3640c1c38b8e4e43584d8df18be5fc6b0aa314ce6ebf51b53313d4306cca8e46"
 dependencies = [
  "hermit-abi",
  "libc",
- "windows-sys 0.52.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -5312,7 +5312,7 @@ checksum = "04744f49eae99ab78e0d5c0b603ab218f515ea8cfe5a456d7629ad883a3b6e7d"
 [[package]]
 name = "orogen-runtime"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=6d01526c8081ae2f03af17f6fdb4bc05576ec5e0#6d01526c8081ae2f03af17f6fdb4bc05576ec5e0"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
 dependencies = [
  "frame-executive",
  "frame-support",
@@ -5364,7 +5364,7 @@ checksum = "b15813163c1d831bf4a13c3610c05c0d03b39feb07f7e09fa234dac9b15aaf39"
 [[package]]
 name = "pallet-attestation-registry"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=6d01526c8081ae2f03af17f6fdb4bc05576ec5e0#6d01526c8081ae2f03af17f6fdb4bc05576ec5e0"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -5426,7 +5426,7 @@ dependencies = [
 [[package]]
 name = "pallet-bme"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=6d01526c8081ae2f03af17f6fdb4bc05576ec5e0#6d01526c8081ae2f03af17f6fdb4bc05576ec5e0"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -5463,7 +5463,7 @@ dependencies = [
 [[package]]
 name = "pallet-job-market"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=6d01526c8081ae2f03af17f6fdb4bc05576ec5e0#6d01526c8081ae2f03af17f6fdb4bc05576ec5e0"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -5477,7 +5477,7 @@ dependencies = [
 [[package]]
 name = "pallet-model-registry"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=6d01526c8081ae2f03af17f6fdb4bc05576ec5e0#6d01526c8081ae2f03af17f6fdb4bc05576ec5e0"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -5491,7 +5491,7 @@ dependencies = [
 [[package]]
 name = "pallet-nonce-vault"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=6d01526c8081ae2f03af17f6fdb4bc05576ec5e0#6d01526c8081ae2f03af17f6fdb4bc05576ec5e0"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -5505,7 +5505,7 @@ dependencies = [
 [[package]]
 name = "pallet-operator-stake"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=6d01526c8081ae2f03af17f6fdb4bc05576ec5e0#6d01526c8081ae2f03af17f6fdb4bc05576ec5e0"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -5519,7 +5519,7 @@ dependencies = [
 [[package]]
 name = "pallet-oracle-twap"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=6d01526c8081ae2f03af17f6fdb4bc05576ec5e0#6d01526c8081ae2f03af17f6fdb4bc05576ec5e0"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -5533,7 +5533,7 @@ dependencies = [
 [[package]]
 name = "pallet-pouw-mint"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=6d01526c8081ae2f03af17f6fdb4bc05576ec5e0#6d01526c8081ae2f03af17f6fdb4bc05576ec5e0"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -5570,7 +5570,7 @@ dependencies = [
 [[package]]
 name = "pallet-slashing"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=6d01526c8081ae2f03af17f6fdb4bc05576ec5e0#6d01526c8081ae2f03af17f6fdb4bc05576ec5e0"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -5667,7 +5667,7 @@ dependencies = [
 [[package]]
 name = "pallet-treasury-ext"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=6d01526c8081ae2f03af17f6fdb4bc05576ec5e0#6d01526c8081ae2f03af17f6fdb4bc05576ec5e0"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -5681,7 +5681,7 @@ dependencies = [
 [[package]]
 name = "pallet-yuma-consensus"
 version = "0.1.0"
-source = "git+https://github.com/orogen-network/pallet-suite?rev=6d01526c8081ae2f03af17f6fdb4bc05576ec5e0#6d01526c8081ae2f03af17f6fdb4bc05576ec5e0"
+source = "git+https://github.com/orogen-network/pallet-suite?rev=ca947b089344226e455dfcaccafedd7f14fe53ce#ca947b089344226e455dfcaccafedd7f14fe53ce"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -6451,7 +6451,7 @@ dependencies = [
  "quinn-udp",
  "rustc-hash 2.1.2",
  "rustls",
- "socket2 0.5.10",
+ "socket2 0.6.3",
  "thiserror 2.0.18",
  "tokio",
  "tracing",
@@ -6488,9 +6488,9 @@ dependencies = [
  "cfg_aliases 0.2.1",
  "libc",
  "once_cell",
- "socket2 0.5.10",
+ "socket2 0.6.3",
  "tracing",
- "windows-sys 0.52.0",
+ "windows-sys 0.60.2",
 ]
 
 [[package]]
@@ -6917,7 +6917,7 @@ dependencies = [
  "errno",
  "libc",
  "linux-raw-sys",
- "windows-sys 0.52.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -9712,7 +9712,7 @@ dependencies = [
  "getrandom 0.4.2",
  "once_cell",
  "rustix",
- "windows-sys 0.52.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -10972,7 +10972,7 @@ version = "0.1.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c2a7b1c03c876122aa43f3020e6c3c3ee5c05081c9a00739faf7503aeba10d22"
 dependencies = [
- "windows-sys 0.52.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
