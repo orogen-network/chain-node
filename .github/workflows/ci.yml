@@ -17,7 +17,7 @@ jobs:
   ci:
     name: ci
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - uses: dtolnay/rust-toolchain@stable
@@ -42,6 +42,12 @@ jobs:
           if [ "${GITHUB_REPOSITORY##*/}" = "docs-site" ]; then
             git clone --depth 1 https://github.com/orogen-network/landing-site ../landing-site
           fi
+      - name: Install Substrate build prerequisites
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends protobuf-compiler clang libclang-dev
+          rustup component add rust-src
+          rustup target add wasm32-unknown-unknown wasm32v1-none
       - uses: actions/cache@v4
         if: ${{ hashFiles('Cargo.toml') != '' }}
         with:
