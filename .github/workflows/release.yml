@@ -21,8 +21,10 @@ jobs:
     timeout-minutes: 180
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-      # Same toolchain the CI workflow uses for this repo.
-      - uses: dtolnay/rust-toolchain@stable
+      # Same toolchain the CI workflow uses for this repo. Pinned to 1.95:
+      # rustc 1.96 breaks the substrate-wasm-builder 33 runtime link
+      # (ext_* host functions surface as undefined wasm symbols).
+      - uses: dtolnay/rust-toolchain@1.95.0
         with:
           targets: wasm32-unknown-unknown
       - name: Install Substrate build prerequisites
